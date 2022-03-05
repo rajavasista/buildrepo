@@ -17,8 +17,7 @@ pipeline
 		sh 'docker version'
                 sh 'echo "Creating Docker Image..."'
 		sh 'docker build -t vasistaops/mypython:1.0 .'
-		sh 'echo $DOCKERHUB_CREDENTIALS'
-		sh 'echo $DOCKERHUB_CREDENTIALS_USR'
+		sh 'doker login -u $DOCKERHUB_CREDENTIALS_USR -p DOCKERHUB_CREDENTIALS_PWD'
 		sh 'docker push vasistaops/mypython:1.0'
             }
         }
