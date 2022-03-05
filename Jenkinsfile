@@ -13,6 +13,7 @@ pipeline
 		sh 'docker version'
                 sh 'echo "Creating Docker Image..."'
 		sh 'docker build -t vasistaops/mypython:1.0 .'
+		sh 'docker push vasistaops/mypython:1.0'
             }
         }
     }
